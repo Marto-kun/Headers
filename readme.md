@@ -2,6 +2,8 @@ Ejemplo de ingreso de datos:
 
 
 Tipo numerico: 
+
+
 do
     {
         printf("\nIngrese la cantidad de productos a ingresar (1 - 10): ");
@@ -33,6 +35,8 @@ do
 
 
 Tipo caracter:
+
+
 // Ingreso de nombres de productos
     for (int i = 0; i < n; i++)
     {
