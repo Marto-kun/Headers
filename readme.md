@@ -3,7 +3,7 @@ Ejemplo de ingreso de datos:
 
 Tipo numerico: 
 
-
+int nValido = 0;
 do
     {
         printf("\nIngrese la cantidad de productos a ingresar (1 - 10): ");

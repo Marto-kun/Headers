@@ -5,13 +5,13 @@
 
 /**
  * @brief Funcion para verificar numeros enteros
- * 
- * @param string 
- * @return int 
+ *
+ * @param string
+ * @return int
  */
 int VerificacionDigitos(char string[])
 {
-    
+
     if (strlen(string) == 0)
     {
         return 0; // Comprobar que la cadena no este vacia
@@ -29,9 +29,9 @@ int VerificacionDigitos(char string[])
 
 /**
  * @brief Funcion para validar datos decimales
- * 
- * @param string 
- * @return int 
+ *
+ * @param string
+ * @return int
  */
 int VerificacionFloat(char string[])
 {
@@ -74,7 +74,7 @@ int VerificacionFloat(char string[])
 /**
  * @brief Funcion para limpieza de buffer
  * evitar buffer overflow
- * 
+ *
  */
 void LimpiarBuffer()
 {
@@ -83,12 +83,11 @@ void LimpiarBuffer()
         ;
 }
 
-
 /**
  * @brief Funcion para verificar solo letras
- * 
- * @param string 
- * @return int 
+ *
+ * @param string
+ * @return int
  */
 int VerificacionChar(char string[])
 {
@@ -109,3 +108,47 @@ int VerificacionChar(char string[])
     return 1; // Si la cadena son solo caracteres entonces se retorna 1
 }
 
+/**
+ * @brief Funcion para verificar solo letras
+ *
+ * @param string
+ * @return int
+ */
+int VerificacionCharEspacios(char string[])
+{
+    if (strlen(string) == 0)
+    {
+        return 0; // Comprobar que la cadena no este vacia
+    }
+
+    size_t len = strlen(string);
+
+    for (int i = 0; i < len; i++)
+    {
+        if (!isalpha(string[i]) && string[i] != ' ')
+        {
+            return 0; // Si el elemento de la cadena es digito retorna 0
+        }
+    }
+    return 1; // Si la cadena son solo caracteres o espacios entonces se retorna 1
+}
+
+/**
+ * @brief Funcion para verificar si es que una cadena ingresada esta vacia
+ *
+ * @param str
+ * @return 0 si es valida, 1 si esta vacia
+ */
+int esVacia(char *str)
+{
+    if (str[0] == '\0')
+    {
+        return 1;
+    }
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] != ' ' && str[i] != '\t')
+            return 0;
+    }
+    return 1;
+}
